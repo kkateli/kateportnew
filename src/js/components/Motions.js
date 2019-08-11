@@ -4,6 +4,8 @@ import ScrollMagic from 'ScrollMagic';
 // import '../../../node_modules/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap';
 //all the css animations need gsap as dependency
 import 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap';
+import 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators';
+
 
 class Motions extends Component {
   constructor(props) {
@@ -21,6 +23,7 @@ class Motions extends Component {
         scale: 0.5,
         color: "red"
       })
+      .addIndicators()
       .setPin("#myElement") // pins the element for the the scene's duration
       .addTo(this.controller); // assign the scene to the controller
   }
